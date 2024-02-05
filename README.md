@@ -2,7 +2,7 @@
 
 ## Requirements 
 
-- iOS 14 and above
+- iOS 13 and above
 
 ## Usage Example
 
