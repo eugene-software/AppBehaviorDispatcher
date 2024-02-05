@@ -54,14 +54,23 @@ open class AppBehaviorDelegate: UIResponder, UIApplicationDelegate, UNUserNotifi
         behaviorDispatcher.application(application, didReceiveRemoteNotification: userInfo, fetchCompletionHandler: completionHandler)
     }
     
+    @available(iOS 13.2, *)
     public func application(_ application: UIApplication, shouldSaveSecureApplicationState coder: NSCoder) -> Bool {
         behaviorDispatcher.application(application, shouldSaveSecureApplicationState: coder)
     }
     
+    @available(iOS 13.2, *)
     public func application(_ application: UIApplication, shouldRestoreSecureApplicationState coder: NSCoder) -> Bool {
         behaviorDispatcher.application(application, shouldRestoreSecureApplicationState: coder)
     }
     
+    public func application(_ application: UIApplication, shouldRestoreApplicationState coder: NSCoder) -> Bool {
+        behaviorDispatcher.application(application, shouldRestoreApplicationState: coder)
+    }
+    
+    public func application(_ application: UIApplication, shouldSaveApplicationState coder: NSCoder) -> Bool {
+        behaviorDispatcher.application(application, shouldSaveApplicationState: coder)
+    }
     
     //MARK: - UNUserNotificationCenterDelegate
     //

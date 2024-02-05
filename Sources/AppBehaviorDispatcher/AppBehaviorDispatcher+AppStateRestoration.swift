@@ -22,6 +22,7 @@ extension AppBehaviorDispatcher {
         return nil
     }
     
+    @available(iOS 13.2, *)
     func application(_ application: UIApplication, shouldSaveSecureApplicationState coder: NSCoder) -> Bool {
         var result = false
         
@@ -34,6 +35,7 @@ extension AppBehaviorDispatcher {
         return result
     }
     
+    @available(iOS 13.2, *)
     func application(_ application: UIApplication, shouldRestoreSecureApplicationState coder: NSCoder) -> Bool {
         var result = false
         for behavior in behaviors {
@@ -44,6 +46,30 @@ extension AppBehaviorDispatcher {
         
         return result
     }
+    
+    func application(_ application: UIApplication, shouldSaveApplicationState coder: NSCoder) -> Bool {
+        var result = false
+        
+        for behavior in behaviors {
+            if behavior.application?(application, shouldSaveApplicationState: coder) ?? false {
+                result = true
+            }
+        }
+        
+        return result
+    }
+    
+    func application(_ application: UIApplication, shouldRestoreApplicationState coder: NSCoder) -> Bool {
+        var result = false
+        for behavior in behaviors {
+            if behavior.application?(application, shouldRestoreApplicationState: coder) ?? false {
+                result = true
+            }
+        }
+        
+        return result
+    }
+    
 
     @available(iOS 6.0, *)
     func application(_ application: UIApplication, willEncodeRestorableStateWith coder: NSCoder) {
