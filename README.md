@@ -1,5 +1,9 @@
 # AppBehaviorDispatcher
 
+[![Version](https://img.shields.io/cocoapods/v/AppBehaviorDispatcher.svg?style=flat)](https://cocoapods.org/pods/AppBehaviorDispatcher)
+[![License](https://img.shields.io/cocoapods/l/AppBehaviorDispatcher.svg?style=flat)](https://cocoapods.org/pods/AppBehaviorDispatcher)
+[![Platform](https://img.shields.io/cocoapods/p/AppBehaviorDispatcher.svg?style=flat)](https://cocoapods.org/pods/AppBehaviorDispatcher)
+
 ## Requirements 
 
 - iOS 13 and above
