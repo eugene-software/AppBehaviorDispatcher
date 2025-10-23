@@ -29,7 +29,7 @@
 import UIKit
 import UserNotifications
 
-public protocol ApplicationBehavior: UIApplicationDelegate, UNUserNotificationCenterDelegate { }
+public protocol ApplicationBehavior: UIApplicationDelegate, UNUserNotificationCenterDelegate, UISceneDelegate { }
 
 public class AppBehaviorDispatcher {
 
